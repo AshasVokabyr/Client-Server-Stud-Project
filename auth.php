@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once __DIR__ . '/api/models/User.php';
+require_once __DIR__ . '/models/User.php';
 
 $userModel = new User();
 
