@@ -6,7 +6,7 @@ require_once __DIR__ . '/controllers/UserController.php';
 $routes = require __DIR__ . '/routes.php';
 
 $method = $_SERVER['REQUEST_METHOD'];
-$uri = strtok($_SERVER['RUQUEST_URI']);
+$uri = strtok($_SERVER['REQUEST_URI']);
 $uri = preg_replace('#^/api/#', '', $uri);
 $uri = $uri === '' ? '/' : $uri;
 

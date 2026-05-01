@@ -12,14 +12,13 @@ function logAuth($login, $action) {
 }
 
 function isLoggedIn() {
-    return isset($_SESSION["user"]);
+    return isset($_SESSION["user_email"]);
 }
 
-function login($login, $password) {
+function login($email, $password) {
     global $userModel;
     if ($userModel->verifyPassword($email, $password)) {
         $_SESSION["user_email"] = $email;
-        $user = $userModel->findByEmail($email);
         logAuth($email, 'SUCCESS_LOGIN');
         return true;
     }
@@ -28,9 +27,9 @@ function login($login, $password) {
 }
 
 function logout() {
-    if (isset($_SESSION['user'])) {
-        logAuth($_SESSION['user'], 'LOGOUT');
-        unset($_SESSION['user']);
+    if (isset($_SESSION['user_email'])) {
+        logAuth($_SESSION['user_email'], 'LOGOUT');
+        unset($_SESSION['user_email']);
         session_destroy();
     }
 }
