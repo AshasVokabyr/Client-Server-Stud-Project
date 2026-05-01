@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ПР-1-Каталог</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <!-- Меню сайта -->
+    <ul class="menu">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="catalog.html">Каталог</a></li>
+        <li><a href="cart.html">Корзина (<span id="cart-counter">0</span>)</a></li>
+    </ul>
+
+    <hr>
+
+    <!-- Фильтр -->
+    <div id="filter">
+        <label>Категория:
+            <select id="category-filter">
+                <option value="all">Все категории</option>
+                <option value="Смартфоны">Смартфоны</option>
+                <option value="Ноутбуки">Ноутбуки</option>
+                <option value="Наушники">Наушники</option>
+            </select>
+        </label>
+        <label>Цена от: <input type="number" id="min-price" value="0"></label>
+        <label>до: <input type="number" id="max-price" value="1000000"></label>
+        <button id="apply-filter">Применить фильтр</button>
+    </div>
+
+    <hr>
+
+    <!-- Каталог товаров (все товары с полным описанием) -->
+    <div id="catalog">
+
+        <!-- Товар 1: iPhone 17 Pro -->
+        <div class="product-wrapper" data-category="Смартфоны" data-price="131999">
+            <div id="tovar1" class="product">
+                <h3>iPhone 17 Pro</h3>
+                <a href="images/premphone.jpg" target="_blank">
+                    <img src="images/premphone.jpg" alt="iPhone 17 Pro" width="150" height="250">
+                </a>
+                <br>
+                <h4 class="short-desc-title">Описание</h4>
+                <p class="short-desc">Это современный смартфон с хорошей камерой.</p>
+                
+                <h4 class="specs-title">Характеристики</h4>
+                <details>
+                    <summary>Нажмите, чтобы увидеть характеристики</summary>
+                    <ul class="specs-list">
+                        <li>Экран: 6.3 дюймов</li>
+                        <li>Память: 256 ГБ</li>
+                        <li>Камера: 48 МП</li>
+                        <li>Батарея: 3988 mAh</li>
+                    </ul>
+                </details>
+                
+                <h4 class="detail-title">Подробное описание</h4>
+                <p class="detail-desc">iPhone 17 Pro оснащён системой трёх камер с лазерным радаром, процессором A18 Pro и керамическим экраном Ceramic Shield. Поддерживает съёмку в ProRes и пространственное видео. Время автономной работы до 29 часов воспроизведения видео.</p>
+                
+                <h4>Цена</h4>
+                <p><strong>131 999 ₽</strong></p>
+                <button class="add-to-cart" data-id="1">Добавить в корзину</button>
+            </div>
+            <hr>
+        </div>
+
+        <!-- Товар 2: Samsung Galaxy Z-Flip 7 -->
+        <div class="product-wrapper" data-category="Смартфоны" data-price="99499">
+            <div id="tovar2" class="product">
+                <h3>Samsung Galaxy Z-Flip 7</h3>
+                <a href="images/smartphone.jpg" target="_blank">
+                    <img src="images/smartphone.jpg" alt="Samsung Galaxy Z-Flip 7" width="150" height="150">
+                </a>
+                <br>
+                <h4 class="short-desc-title">Описание</h4>
+                <p class="short-desc">Флагманский смартфон с профессиональной камерой.</p>
+                
+                <h4 class="specs-title">Характеристики</h4>
+                <details>
+                    <summary>Нажмите, чтобы увидеть характеристики</summary>
+                    <ul class="specs-list">
+                        <li>Экран: 6.7 дюймов AMOLED</li>
+                        <li>Память: 256 ГБ</li>
+                        <li>Камера: 72 МП + телеобъектив</li>
+                        <li>Батарея: 4300 mAh</li>
+                    </ul>
+                </details>
+                
+                <h4 class="detail-title">Подробное описание</h4>
+                <p class="detail-desc">Гибкий дисплей с адаптивной частотой 120 Гц, улучшенный шарнир Flex Hinge, поддержка S Pen и режим Flex Mode для видеозвонков. Корпус защищён от воды по стандарту IPX8.</p>
+                
+                <h4>Цена</h4>
+                <p><strong>99 499 ₽</strong></p>
+                <button class="add-to-cart" data-id="2">Добавить в корзину</button>
+            </div>
+            <hr>
+        </div>
+
+        <!-- Товар 3: Xiaomi Redmi Note 13 Pro -->
+        <div class="product-wrapper" data-category="Смартфоны" data-price="23199">
+            <div id="tovar3" class="product">
+                <h3>Xiaomi Redmi Note 13 Pro</h3>
+                <a href="images/xiaomi.jpg" target="_blank">
+                    <img src="images/xiaomi.jpg" alt="Xiaomi Redmi Note 13 Pro" width="150" height="150">
+                </a>
+                <br>
+                <h4 class="short-desc-title">Описание</h4>
+                <p class="short-desc">Стильный смартфон с 200-мегапиксельной камерой и быстрой зарядкой.</p>
+                
+                <h4 class="specs-title">Характеристики</h4>
+                <details>
+                    <summary>Нажмите, чтобы увидеть характеристики</summary>
+                    <ul class="specs-list">
+                        <li>Экран: 6.67 дюймов AMOLED 120 Гц</li>
+                        <li>Память: 8/128 ГБ</li>
+                        <li>Камера: 200 МП + 8 МП + 2 МП</li>
+                        <li>Батарея: 5000 mAh</li>
+                    </ul>
+                </details>
+                
+                <h4 class="detail-title">Подробное описание</h4>
+                <p class="detail-desc">Основная камера 200 МП с оптической стабилизацией, быстрая зарядка 120 Вт (до 100% за 20 минут), защита от брызг IP53, стереодинамики с Dolby Atmos.</p>
+                
+                <h4>Цена</h4>
+                <p><strong>23 199 ₽</strong></p>
+                <button class="add-to-cart" data-id="3">Добавить в корзину</button>
+            </div>
+            <hr>
+        </div>
+
+        <!-- Товар 4: Apple MacBook Air 15 M4 -->
+        <div class="product-wrapper" data-category="Ноутбуки" data-price="95899">
+            <div id="tovar4" class="product">
+                <h3>Apple MacBook Air 15 M4</h3>
+                <a href="images/macbook.jpg" target="_blank">
+                    <img src="images/macbook.jpg" alt="MacBook Air 15" width="200" height="150">
+                </a>
+                <br>
+                <h4 class="short-desc-title">Описание</h4>
+                <p class="short-desc">Тонкий и легкий ноутбук с потрясающим дисплеем и производительностью.</p>
+                
+                <h4 class="specs-title">Характеристики</h4>
+                <details>
+                    <summary>Нажмите, чтобы увидеть характеристики</summary>
+                    <ul class="specs-list">
+                        <li>Процессор: Apple M4 (10 ядер)</li>
+                        <li>Оперативная память: 16 ГБ</li>
+                        <li>Диск: SSD 256 ГБ</li>
+                        <li>Экран: 13.6"</li>
+                    </ul>
+                </details>
+                
+                <h4 class="detail-title">Подробное описание</h4>
+                <p class="detail-desc">Беспрецедентно тонкий корпус (всего 1,2 см), бесшумная работа благодаря пассивному охлаждению, дисплей Liquid Retina с яркостью 500 нит, время автономной работы до 18 часов, Touch ID и улучшенная камера 1080p.</p>
+                
+                <h4>Цена</h4>
+                <p><strong>95 899 ₽</strong></p>
+                <button class="add-to-cart" data-id="4">Добавить в корзину</button>
+            </div>
+            <hr>
+        </div>
+
+        <!-- Товар 5: ASUS ROG Strix G16 -->
+        <div class="product-wrapper" data-category="Ноутбуки" data-price="166999">
+            <div id="tovar5" class="product">
+                <h3>ASUS ROG Strix G16</h3>
+                <a href="images/asus-rog.png" target="_blank">
+                    <img src="images/asus-rog.png" alt="ASUS ROG Strix G16" width="200" height="150">
+                </a>
+                <br>
+                <h4 class="short-desc-title">Описание</h4>
+                <p class="short-desc">Высокопроизводительный игровой ноутбук с мощной видеокартой.</p>
+                
+                <h4 class="specs-title">Характеристики</h4>
+                <details>
+                    <summary>Нажмите, чтобы увидеть характеристики</summary>
+                    <ul class="specs-list">
+                        <li>Процессор: Intel Core i7-13650HX</li>
+                        <li>Оперативная память: 32 ГБ DDR5</li>
+                        <li>Видеокарта: NVIDIA RTX 4060 8 ГБ</li>
+                        <li>Диск: SSD 1 ТБ NVMe</li>
+                        <li>Экран: 16" 165 Гц</li>
+                    </ul>
+                </details>
+                
+                <h4 class="detail-title">Подробное описание</h4>
+                <p class="detail-desc">Экран с частотой обновления 165 Гц и временем отклика 3 мс, продвинутая система охлаждения с жидким металлом, подсветка клавиатуры Aura Sync, поддержка Dolby Atmos и портов Thunderbolt 4.</p>
+                
+                <h4>Цена</h4>
+                <p><strong>166 999 ₽</strong></p>
+                <button class="add-to-cart" data-id="5">Добавить в корзину</button>
+            </div>
+            <hr>
+        </div>
+
+        <!-- Товар 6: Dell XPS 13 Plus -->
+        <div class="product-wrapper" data-category="Ноутбуки" data-price="190999">
+            <div id="tovar6" class="product">
+                <h3>Dell XPS 13 Plus</h3>
+                <a href="images/dell-xps.jpg" target="_blank">
+                    <img src="images/dell-xps.jpg" alt="Dell XPS 13 Plus" width="200" height="100">
+                </a>
+                <br>
+                <h4 class="short-desc-title">Описание</h4>
+                <p class="short-desc">Премиальный ультрабук с уникальным дизайном и сенсорной панелью.</p>
+                
+                <h4 class="specs-title">Характеристики</h4>
+                <details>
+                    <summary>Нажмите, чтобы увидеть характеристики</summary>
+                    <ul class="specs-list">
+                        <li>Процессор: Intel Core i7-1360P</li>
+                        <li>Оперативная память: 16 ГБ LPDDR5</li>
+                        <li>Видеокарта: Intel Iris Xe</li>
+                        <li>Диск: SSD 512 ГБ</li>
+                        <li>Экран: 13.4" OLED Touch</li>
+                        <li>Вес: 1.26 кг</li>
+                    </ul>
+                </details>
+                
+                <h4 class="detail-title">Подробное описание</h4>
+                <p class="detail-desc">Безрамочный дизайн, стеклянная сенсорная панель, встроенная в подставку для рук, ёмкостные клавиши, корпус из алюминия, два порта Thunderbolt 4, аудиосистема с 4 динамиками.</p>
+                
+                <h4>Цена</h4>
+                <p><strong>190 999 ₽</strong></p>
+                <button class="add-to-cart" data-id="6">Добавить в корзину</button>
+            </div>
+            <hr>
+        </div>
+
+        <!-- Товар 7: Sony WH-1000XM5 -->
+        <div class="product-wrapper" data-category="Наушники" data-price="29990">
+            <div id="tovar7" class="product">
+                <h3>Sony WH-1000XM5</h3>
+                <a href="images/sony.jpg" target="_blank">
+                    <img src="images/sony.jpg" alt="Sony WH-1000XM5" width="200" height="150">
+                </a>
+                <br>
+                <h4 class="short-desc-title">Описание</h4>
+                <p class="short-desc">Лучшие беспроводные наушники с шумоподавлением премиум-класса.</p>
+                
+                <h4 class="specs-title">Характеристики</h4>
+                <details>
+                    <summary>Нажмите, чтобы увидеть характеристики</summary>
+                    <ul class="specs-list">
+                        <li>Тип: Полноразмерные, беспроводные</li>
+                        <li>Время работы: 30 часов (с ANC)</li>
+                        <li>Шумоподавление: Adaptive ANC</li>
+                        <li>Вес: 250 грамм</li>
+                    </ul>
+                </details>
+                
+                <h4 class="detail-title">Подробное описание</h4>
+                <p class="detail-desc">Фирменный процессор QN1 с двумя технологиями шумоподавления, 8 микрофонов для чёткой передачи голоса, поддержка LDAC, быстрая зарядка (3 часа работы за 3 минуты), мягкие амбушюры из искусственной кожи.</p>
+                
+                <h4>Цена</h4>
+                <p><strong>29 990 ₽</strong></p>
+                <button class="add-to-cart" data-id="7">Добавить в корзину</button>
+            </div>
+            <hr>
+        </div>
+
+        <!-- Товар 8: Apple AirPods Max -->
+        <div class="product-wrapper" data-category="Наушники" data-price="54990">
+            <div id="tovar8" class="product">
+                <h3>Apple AirPods Max</h3>
+                <a href="images/airpods-max.jpg" target="_blank">
+                    <img src="images/airpods-max.jpg" alt="Apple AirPods Max" width="200" height="200">
+                </a>
+                <br>
+                <h4 class="short-desc-title">Описание</h4>
+                <p class="short-desc">Студийные наушники с потрясающим звуком и дизайном.</p>
+                
+                <h4 class="specs-title">Характеристики</h4>
+                <details>
+                    <summary>Нажмите, чтобы увидеть характеристики</summary>
+                    <ul class="specs-list">
+                        <li>Тип: Полноразмерные, беспроводные</li>
+                        <li>Время работы: 20 часов с ANC</li>
+                        <li>Чип: Apple H1</li>
+                        <li>Вес: 384 грамм</li>
+                        <li>Особенности: Пространственное аудио</li>
+                    </ul>
+                </details>
+                
+                <h4 class="detail-title">Подробное описание</h4>
+                <p class="detail-desc">Драйверы с высоким динамическим диапазоном, акустическая архитектура с двумя неодимовыми кольцевыми магнитами, сетчатый чехол Smart Case, активное шумоподавление и режим прозрачности, пространственное аудио с динамическим отслеживанием движения головы.</p>
+                
+                <h4>Цена</h4>
+                <p><strong>54 990 ₽</strong></p>
+                <button class="add-to-cart" data-id="8">Добавить в корзину</button>
+            </div>
+            <hr>
+        </div>
+
+        <!-- Товар 9: JBL Tune 760NC -->
+        <div class="product-wrapper" data-category="Наушники" data-price="7990">
+            <div id="tovar9" class="product">
+                <h3>JBL Tune 760NC</h3>
+                <a href="images/jbl.jpg" target="_blank">
+                    <img src="images/jbl.jpg" alt="JBL Tune 760NC" width="200" height="200">
+                </a>
+                <br>
+                <h4 class="short-desc-title">Описание</h4>
+                <p class="short-desc">Доступные наушники с активным шумоподавлением и мощным басом.</p>
+                
+                <h4 class="specs-title">Характеристики</h4>
+                <details>
+                    <summary>Нажмите, чтобы увидеть характеристики</summary>
+                    <ul class="specs-list">
+                        <li>Тип: Полноразмерные, беспроводные</li>
+                        <li>Время работы: 35 часов</li>
+                        <li>Вес: 220 грамм</li>
+                        <li>Быстрая зарядка: 5 мин = 2 часа</li>
+                        <li>Поддержка голосовых ассистентов</li>
+                    </ul>
+                </details>
+                
+                <h4 class="detail-title">Подробное описание</h4>
+                <p class="detail-desc">Технология Pure Bass, складная конструкция, мультиточечное подключение, кнопки управления на чашке, возможность подключения по аудиокабелю (в комплекте). Активное шумоподавление отсекает низкочастотный шум транспорта.</p>
+                
+                <h4>Цена</h4>
+                <p><strong>7 990 ₽</strong></p>
+                <button class="add-to-cart" data-id="9">Добавить в корзину</button>
+            </div>
+            <hr>
+        </div>
+
+    </div> <!-- конец каталога -->
+
+    <hr>
+
+    <!-- Подвал сайта -->
+    <footer>
+        <p>&copy; Все права защищены</p>
+        <p><small>Это подвал сайта</small></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

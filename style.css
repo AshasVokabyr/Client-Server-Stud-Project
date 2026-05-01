@@ -1,0 +1,81 @@
+body {
+    background-color: rgb(180, 200, 240);
+}
+
+
+.menu {
+    list-style-type: none;  /* убираем маркеры */
+    padding-left: 0;         /* убираем отступ слева, который браузер добавляет для списка */
+    margin: 0;               /* убираем внешние отступы */
+}
+
+
+.menu li a {
+    color: #333;                /* цвет текста */
+    font-size: 18px;            /* размер шрифта */
+    font-weight: bold;          /* жирное начертание */
+    text-decoration: none;      /* убираем подчёркивание */
+    font-family: Arial, sans-serif; /* шрифт */
+    margin-right: 15px;         /* небольшой отступ между пунктами */
+}
+
+
+.menu a:hover {
+    text-decoration: underline;
+}
+
+
+.catalog {
+    color: #333;                /* цвет текста */
+    font-size: 18px;            /* размер шрифта */
+    font-weight: bold;          /* жирное начертание */
+    text-decoration: none;      /* убираем подчёркивание */
+    font-family: Arial, sans-serif; /* шрифт */
+}
+
+
+.product .short-desc-title,
+.product .specs-title,
+.product .detail-title {
+    color: black;                    /* чёрный цвет текста */
+    font-size: 18px;                 /* размер 18 пикселей */
+    font-weight: 400;                /* насыщенность 400 */
+    background-color: rgb(230, 240, 255); /* фон */
+    padding: 5px;                    
+}
+
+
+.product .short-desc {
+    color: rgb(80, 60, 120);         
+    font-size: 14px;                 
+    font-style: italic;              
+    line-height: 16px;               
+}
+
+
+.product .detail-desc {
+    color: rgb(30, 100, 30);         /* тёмно‑зелёный */
+    font-size: 16px;                 /* 16 пикселей */
+    font-weight: 400;                /* нормальная насыщенность */
+    line-height: 24px;               /* высота строки 24 пикселя */
+    text-align: left;                /* выравнивание по левому краю */
+}
+
+
+.product .specs-list {
+    list-style: none;                /* убираем стандартные маркеры */
+    padding-left: 0;                  /* убираем стандартный отступ */
+    margin: 10px 0;
+}
+
+
+.product .specs-list li {
+    background-image: url('images/marker.png'); 
+    background-repeat: no-repeat;
+    background-size: 16px 16px;       /* подгоняем размер маркера */
+    background-position: 0 2px;       /* немного смещаем по вертикали */
+    padding-left: 25px;                /* отступ для текста, чтобы не налезал на картинку */
+    margin-bottom: 5px;                /* расстояние между пунктами */
+    color: rgb(0, 0, 150);             /* цвет текста */
+    font-size: 15px;                   /* размер шрифта */
+}
