@@ -16,18 +16,18 @@
     <h2>Авторизация</h2>
     <?php
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        $login = $_POST['login'] ?? '';
+        $email = $_POST['email'] ?? '';
         $pass = $_POST['password'] ?? '';
-        if (login($login, $pass)) {
+        if (login($email, $pass)) {
             header('Location: dashboard.php');
             exit;
         } else {
-            echo "<p style='color:red'>Неверный логин или пароль</p>";
+            echo "<p style='color:red'>Неверный email или пароль</p>";
         }
     }
     ?>
     <form method="post">
-        <label>Логин: <input type="text" name="login" required></label><br>
+        <label>Логин: <input type="email" name="email" required></label><br>
         <label>Пароль: <input type="password" name="password" required></label><br>
         <button type="submit">Войти</button>
     </form>
