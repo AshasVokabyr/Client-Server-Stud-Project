@@ -1,12 +1,8 @@
 <?php
 session_start();
+require_once __DIR__ . '/api/models/User.php';
 
-
-// Хранилище пользователей
-$users = [
-    'admin' => password_hash('admin123', PASSWORD_DEFAULT),
-    'user' => password_hash('pass456', PASSWORD_DEFAULT),
-];
+$userModel = new User();
 
 function logAuth($login, $action) {
     $ip = $_SERVER['REMOTE_ADDR'] ?? '0.0.0.0';
@@ -20,13 +16,14 @@ function isLoggedIn() {
 }
 
 function login($login, $password) {
-    global $users;
-    if (isset($users[$login]) && password_verify($password, $users[$login])) {
-        $_SESSION["user"] = $login;
-        logAuth($login, 'SUCCES_LOGIN');
+    global $userModel;
+    if ($userModel->verifyPassword($email, $password)) {
+        $_SESSION["user_email"] = $email;
+        $user = $userModel->findByEmail($email);
+        logAuth($email, 'SUCCESS_LOGIN');
         return true;
     }
-    logAuth($login, 'FAIL_LOGIN');
+    logAuth($email, 'FAIL_LOGIN');
     return false;
 }
 
