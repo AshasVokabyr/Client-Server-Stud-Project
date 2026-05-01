@@ -20,12 +20,11 @@ if (!isLoggedIn()) {
         <li><a href="logout.php">Выход</a></li>
     </ul>
     <hr>
-    <h2>Добро пожаловать, <?= htmlspecialchars($_SESSION['user']) ?>!</h2>
+    <h2>Добро пожаловать, <?= htmlspecialchars($_SESSION['user_email']) ?>!</h2>
     <p>Это защищённая страница.</p>
     <div id="cart-items"></div>
     <div id="cart-total"></div>
     <script>
-        // Переиспользуем JavaScript из старого проекта для отображения корзины
         document.addEventListener('DOMContentLoaded', () => {
             if (typeof showCart === 'function') showCart();
         });
