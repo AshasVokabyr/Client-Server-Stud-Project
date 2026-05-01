@@ -13,4 +13,4 @@
 ## 🚀 Как запустить
 1. Клонируйте репозиторий:
    ```bash
-   git clone https://github.com/ваш-юзернейм/название-репо.git
+   https://github.com/AshasVokabyr/Client-Server-Stud-Project.git
